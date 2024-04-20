@@ -1,0 +1,32 @@
+roma@romanlee:~$ nslookup w3schools.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	w3schools.com
+Address: 76.223.115.82
+Name:	w3schools.com
+Address: 13.248.240.135
+
+roma@romanlee:~$ nslookup twitch.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	twitch.com
+Address: 52.42.212.97
+Name:	twitch.com
+Address: 52.43.133.118
+Name:	twitch.com
+Address: 54.148.77.250
+
+roma@romanlee:~$ nslookup aliexpress.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	aliexpress.com
+Address: 47.246.173.30
+Name:	aliexpress.com
+Address: 47.246.173.237
+
