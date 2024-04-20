@@ -6,8 +6,10 @@ PORT: int = 2345
 
 
 def factorial(num: int) -> int:
-    if 0 > num > 100:
-        raise ValueError('Number must be greater than 0 and less than 100')
+    if 0 > num:
+        raise ValueError('Number must be greater than 0')
+    if num > 100:
+        raise ValueError('Number must be less than 100')
     if num == 1 or num == 0:
         return 1
     else:
@@ -22,10 +24,10 @@ def factorial_server() -> None:
     print(f'Waiting for connection on {PORT} port')
     conn, addr = sock.accept()
     print(f'Connected by {addr}')
-    conn.sendall(b'Please enter a number')
+    conn.sendall(b'Please enter a number\n')
     number = conn.recv(1024)
     num_factorial: int = factorial(int(number))
-    conn.sendall(str(num_factorial).encode())
+    conn.sendall((str(num_factorial) + '\n').encode())
     conn.close()
     sock.close()
 
